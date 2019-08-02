@@ -32,20 +32,20 @@
 //
 
 
-`define ENABLE_FLASH
-`define ENABLE_DDR4A
-`defube ENABLE_DDR4B
-`define ENABLE_DDR4C
-`define ENABLE_DDR4D
-`define ENABLE_PCIE
-`define ENABLE_QSFP28A
-`define ENABLE_QSFP28B
-`define ENABLE_QSFP28C
-`define ENABLE_QSFP28D
-`define ENABLE_HPS
+//`define ENABLE_FLASH
+//`define ENABLE_DDR4A
+//`define ENABLE_DDR4B
+//`define ENABLE_DDR4C
+//`define ENABLE_DDR4D
+//`define ENABLE_PCIE
+//`define ENABLE_QSFP28A
+//`define ENABLE_QSFP28B
+//`define ENABLE_QSFP28C
+//`define ENABLE_QSFP28D
+//`define ENABLE_HPS
 
 
-  module DE10_Pro
+module DE10_Pro
     (
      input 	   CLK_100_B3I,
      input 	   CLK_50_B2C,
