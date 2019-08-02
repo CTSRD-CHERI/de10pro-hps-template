@@ -1,1 +1,6 @@
 *~
+output_files
+qdb
+.qsys_edit
+*.bak
+*.csv
