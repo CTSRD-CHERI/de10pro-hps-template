@@ -50,3 +50,4 @@ set_false_path -from * -to [get_ports {LED[2]}]
 set_false_path -from * -to [get_ports {LED[3]}]
 set_max_skew -to [get_ports "HPS_EMAC0_MDC"] 2
 set_max_skew -to [get_ports "HPS_EMAC0_MDIO"] 2
+source ./jtag.sdc
