@@ -1619,3 +1619,8 @@ set_global_assignment -name ENABLE_ED_CRC_CHECK ON
 set_global_assignment -name MINIMUM_SEU_INTERVAL 10000
 set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_115MHZ_IOSC
 set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+
+set_global_assignment -name VERILOG_FILE Fan/Fan_Control.v
+set_global_assignment -name VERILOG_FILE Fan/I2C_Bus_Controller.v
+set_global_assignment -name VERILOG_FILE Fan/I2C_Config.v
+set_global_assignment -name VERILOG_FILE Fan/SEG7_LUT.v

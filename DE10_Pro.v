@@ -335,4 +335,37 @@ module DE10_Pro
 		    .hps_io_hps_io_phery_emac0_MDC          (HPS_EMAC0_MDC)
 		    );
 
+
+//=======================================================
+//  REG/WIRE declarations
+//=======================================================
+wire  [13:0] HEX_DATA0;
+wire  [13:0] HEX_DATA1;
+wire  [12:0] Speed_Switch;
+wire  		Fan_MAX;
+wire			Fan_MIN;
+wire			Fan_TACH;
+wire			Fan_GPIO1;
+
+//=======================================================
+//  Structural coding
+//=======================================================
+assign  LED[3:0]     = {~Fan_GPIO1,~Fan_TACH,~Fan_MIN,~Fan_MAX};
+
+
+assign  Speed_Switch = (SW[0]==0)?13'd2000:13'd5000;
+
+Fan_Control u0(
+ 	.CLK              ( CLK_50_B2C  ),
+   .Speed_Set        ( Speed_Switch),//need set more than 1500rpm
+	.FAN0_Speed       ( HEX_DATA0   ),//FAN0 Speed response . no use ; connect to HEX display 
+	.FAN1_Speed       ( HEX_DATA1   ),//FAN1 Speed response . no use ; connect to HEX display 
+	.Alert_Clear      ( BUTTON[1]   ),
+	.Alert_Type       ( {Fan_GPIO1,Fan_TACH,Fan_MIN,Fan_MAX}),
+	.Alert            ( FAN_ALERT_n ),
+	.FAN_I2C_SCL      ( FAN_I2C_SCL ),
+	.FAN_I2C_SDA      ( FAN_I2C_SDA )
+);
+
+
 endmodule
