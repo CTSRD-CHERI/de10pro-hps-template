@@ -1581,7 +1581,7 @@ set_global_assignment -name USE_CONF_DONE SDM_IO16
 set_global_assignment -name STRATIXV_CONFIGURATION_SCHEME "ACTIVE SERIAL X4"
 set_global_assignment -name INI_VARS "ASM_ENABLE_ADVANCED_DEVICES=ON; hps_dump_handoff_data=on"
 set_global_assignment -name USE_HPS_COLD_RESET SDM_IO15
-set_global_assignment -name HPS_INITIALIZATION "AFTER INIT_DONE"
+set_global_assignment -name HPS_INITIALIZATION "HPS FIRST"
 set_global_assignment -name HPS_DAP_SPLIT_MODE "SDM PINS"
 set_global_assignment -name USE_PWRMGT_SCL SDM_IO0
 set_global_assignment -name USE_PWRMGT_SDA SDM_IO12
@@ -1613,3 +1613,9 @@ set_global_assignment -name IP_FILE ip/DE10_Pro_HPS/DE10_Pro_HPS_clock_in.ip
 set_global_assignment -name IP_FILE ip/DE10_Pro_HPS/DE10_Pro_HPS_reset_in.ip
 set_global_assignment -name IP_FILE ip/s10_hps.ip
 set_global_assignment -name IP_FILE ip/emif_hps.ip
+set_global_assignment -name USE_CONFIGURATION_DEVICE ON
+set_global_assignment -name GENERATE_PR_RBF_FILE ON
+set_global_assignment -name ENABLE_ED_CRC_CHECK ON
+set_global_assignment -name MINIMUM_SEU_INTERVAL 10000
+set_global_assignment -name ACTIVE_SERIAL_CLOCK AS_FREQ_115MHZ_IOSC
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
